@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+h1 {
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 2em;
+}
+
+.search-box {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 12px;
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#geoBtn {
+    padding: 12px;
+    min-width: 50px;
+}
+
+#weatherResult {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #34495e;
+}
+
+.weather-icon {
+    width: 60px;
+    height: 60px;
+    margin: 10px 0;
+}
+
+#loading {
+    display: none;
+    font-size: 16px;
+    margin-top: 15px;
+    color: #7f8c8d;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background: url('https://images.unsplash.com/photo-1538370965046-79c0d6907d47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.dark-mode .container {
+    background: rgba(52, 73, 94, 0.9);
+    color: #ecf0f1;
+}
+
+.dark-mode button {
+    background-color: #e74c3c;
+}
+
+.dark-mode button:hover {
+    background-color: #c0392b;
+}
+
+.dark-mode #weatherResult {
+    color: #ecf0f1;
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 20px;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
